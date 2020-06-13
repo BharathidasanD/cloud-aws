@@ -1,0 +1,56 @@
+<?php include "dbinfo.inc"; ?>
+<?php
+
+  /* Connect to MySQL and select the database. */
+  $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD,DB_DATABASE);
+
+  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+else
+{
+echo "connected";
+}
+?>
+
+<?php
+/*
+$result = mysqli_query($connection, "SELECT REGNO FROM APPLIED WHERE REGNO='16BIT0444' AND C_ID='TCS1'"); 
+
+while($query_data = mysqli_fetch_row($result)) {
+  echo "<tr>";
+  echo "<td>",$query_data[0], "</td> ",
+       "<td>",$query_data[1], "</td>",
+      "<td>",$query_data[2], "</td>",
+     "<td>",$query_data[3], "</td>",
+      "<td>",$query_data[4], "</td>",
+       "<td>",$query_data[5], "</td>",
+"<td>",$query_data[6], "</td>",
+"<td>",$query_data[7], "</td>",
+"<td>",$query_data[8], "</td>",
+"<td>",$query_data[9], "</td>",
+"<td>",$query_data[10], "</td>",
+"<td>",$query_data[11], "</td>";
+  echo "</tr>";
+
+}
+
+$D="DELETE  FROM APPLIED  WHERE C_ID='CTS1'";
+if(mysqli_query($connection, $D))
+{
+echo "drop";
+}
+
+
+$D="UPDATE STUDENTINFO SET ABTURSLF='SWEET' WHERE REGNO='16BIT0446'";
+if(mysqli_query($connection, $D))
+{
+echo "ADDED";
+}
+
+
+
+
+$q = mysqli_query($connection,"DESC APPLIED");
+while($row = mysqli_fetch_array($q)) {
+    echo "{$row['Field']} - {$row['Type']}\n";
+}*/
+?>

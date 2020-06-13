@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<?php 
+session_start();
+session_destroy();
+?>
+<script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 0);
+  window.onunload=function(){null};
+</script>
+         <title>logout</title>
+		 <style>
+			 .button{
+			 background-color:#00FF7F;
+			 border-radius:10px;
+			 color:white;
+			 width:200px;
+			 height:50px;
+			 font-size:20px;
+			 cursor:pointer;
+			 }
+			 .button:hover{
+			 background-color:#de001f;
+			 color:white;
+			 }
+			 </style>
+	</head>
+    <body background="download1.jpg "style="text-align:center;color:white;font-weight:bold">
+	<br><br><br>
+	     <h1><strong><i>Thank you for Visiting ourpage</i></strong></h1>
+		 <h1><strong><i>You have successfully logged out.</i></strong></h1>
+		 <br><br><br><br>
+		 <h2><strong><i>Again You want to login the Webpage</i></strong></h2>
+		 <a href="login.php"><button class="button button"><strong>Click Here</strong></button></a>
+	</body>
+</html>
